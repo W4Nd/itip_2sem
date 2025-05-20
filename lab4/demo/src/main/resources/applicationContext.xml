@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="refrigeratorBean" class="org.example.Refrigerator" />
+    <bean id="dishwasherBean" class="org.example.Dishwasher" />
+    <bean id="vacuumCleanerBean" class="org.example.VacuumCleaner" />
+
+    <bean id="homeBean" class="org.example.Home">
+        <constructor-arg ref="refrigeratorBean" />
+    </bean>
+</beans>
